@@ -4,4 +4,5 @@ Miscellaneous python projects. Too small to create repo for each one of them, to
 Python version: 3.9.9
 
 # TODO
-[] Phone Number and Email Address Extractor
+- [x] Phone Number and Email Address Extractor
+more soon ..
