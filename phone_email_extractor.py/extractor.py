@@ -6,6 +6,10 @@ How to use:
 2. Execute the program.
 3. CTRL+V will paste all findings. 
 """
+# TODO: split into functions
+# TODO: tests
+# TODO: wrap code by while loop to allow more than one extraction
+
 import re
 import pyperclip
 
