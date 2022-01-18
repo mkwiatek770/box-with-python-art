@@ -10,6 +10,7 @@ folder_name: name of folder(s) at given location,
 from datetime import datetime
 import pathlib
 import zipfile
+import os
 
 
 class InvalidLocationError(Exception):
@@ -25,9 +26,9 @@ def compress(*locations) -> None:
     # zamien na pathlib.Path zweryfikuj istnienie
     for path in paths:
         # wyjatki
-        if not path.exists:
-            raise InvalidLocationError('Given folder location: {} does not exist')
-        elif path.is_file:
+        if not path.exists():
+            raise InvalidLocationError(f'Given folder location: {path} does not exist')
+        elif path.is_file():
             raise IsNotDirectoryError(f'Given path: {path} is not a directory')
 
     # stworz nazwe output zip file
@@ -37,7 +38,13 @@ def compress(*locations) -> None:
     full_path = cwd / f'{timestamp}_{zip_folder_name}.zip'
 
     # otworz ctx magerem zip obj
-    with zipfile.open(full_path, 'w') as f:
+    with zipfile.ZipFile(full_path, 'w') as zip_file:
         # przejdz po wszystkich podfolderach kazdego fold i zrob obj.write
-        ...
+        for path in paths:
+            for file in path.rglob('*'):
+                zip_file.write(file, path.name / file.relative_to(path))
         # obsluga wyjatkow
+
+
+if __name__ == '__main__':
+    print(compress('/home/mkwiatek/Desktop/temp', '/home/mkwiatek/Desktop/logs/temp2'))
