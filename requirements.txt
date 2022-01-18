@@ -1,2 +1,5 @@
+beautifulsoup4==4.10.0
 pyperclip==1.8.2
 pytest==6.2.5
+requests==2.27.1
+requests-html==0.10.0
