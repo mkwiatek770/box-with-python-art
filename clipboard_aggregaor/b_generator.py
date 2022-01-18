@@ -10,6 +10,9 @@ folder_name: name of folder(s) at given location,
 from datetime import datetime
 import pathlib
 import zipfile
+# TODO: input validator
+# TODO: argparse
+# TODO: confugable output dir of saved zip
 
 
 class InvalidLocationError(Exception):
