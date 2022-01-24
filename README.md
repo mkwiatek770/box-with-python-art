@@ -5,5 +5,5 @@ Python version: 3.9.9
 
 # TODO
 - [x] Phone Number and Email Address Extractor
-- [] Clipboard aggregator
+- [_] Clipboard aggregator
 - [x] Backup creator
