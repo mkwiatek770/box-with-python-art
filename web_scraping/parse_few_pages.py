@@ -23,11 +23,22 @@ def parse_titles(result):
                 ARTICLES[page_num].append(h2.text)
 
 
+def dump_titles_to_file(name):
+    with open(name, 'w', encoding='utf-8') as f:
+        f.write('Historia żywa - podcasty\n\n')
+        for page_num in range(1, len(ARTICLES) + 1):
+            articles = ARTICLES.get(page_num, [])
+            f.write(f'{page_num}. {LINK}/{page_num}\n')
+            for article in articles:
+                f.write(f'- {article}\n')
+            f.write('\n')
+
+
 if __name__ == '__main__':    
-    page_nums = list(range(1, 2))
+    page_nums = list(range(1, 23))
     results = asession.run( *[lambda page_num=page_num: get_page(page_num) for page_num in page_nums])
 
     for result in results:
         parse_titles(result)
 
-    print(ARTICLES)
+    dump_titles_to_file('test.txt')
