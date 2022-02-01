@@ -1,3 +1,9 @@
+"""
+HTML Parser, which asynchrously fetches results from many pages
+Then parsing is done, which retrieves all article titles.
+Finally all retrieved titles are dumped into file.
+"""
+# TODO: links to articles next to titles
 from collections import defaultdict
 from requests_html import AsyncHTMLSession
 
