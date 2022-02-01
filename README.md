@@ -5,6 +5,6 @@ Python version: 3.9.9
 
 # TODO
 - [x] Phone Number and Email Address Extractor
-- [] Clipboard aggregator
+- [ ] Clipboard aggregator
 - [x] Backup creator
-- Aynchronous web parser (requests_html & beautifulsoup)
+- [ ] Aynchronous web parser (requests_html & beautifulsoup)
