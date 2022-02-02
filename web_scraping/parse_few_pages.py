@@ -7,6 +7,8 @@ Finally all retrieved titles are dumped into file.
 from collections import defaultdict
 from requests_html import AsyncHTMLSession
 
+# TODO dump into pdf, word, csv, json
+
 
 LINK = 'https://www.polskieradio.pl/7/5102/Strona'
 IGNORED_TEXTS = ('Dorota Truszczak', 'Historia żywa')

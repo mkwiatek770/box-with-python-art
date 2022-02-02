@@ -8,3 +8,4 @@ Python version: 3.9.9
 - [ ] Clipboard aggregator
 - [x] Backup creator
 - [x] Aynchronous web parser
+- [ ] Pdf merger 
