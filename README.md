@@ -9,3 +9,4 @@ Python version: 3.9.9
 - [x] Backup creator
 - [x] Aynchronous web parser
 - [ ] Pdf merger 
+- [ ] Keylogger (pyautogui)
