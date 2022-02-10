@@ -10,3 +10,4 @@ Python version: 3.9.9
 - [x] Aynchronous web parser
 - [ ] Pdf merger 
 - [ ] Keylogger (pyautogui)
+- [ ] Script to store secret messages in images (steganography: https://www.youtube.com/watch?v=dD6wl8zrM60)
